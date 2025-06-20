@@ -1,0 +1,84 @@
+#include<iostream>
+using namespace std;
+
+class node {
+public:
+    int data;
+    node* next;
+
+    node(int x) {
+        data = x;
+        next = NULL;
+    }
+};
+
+void insertathead(node*& head, int y) {
+    node* temp = new node(y);
+    temp->next = head;
+    head = temp;
+}
+
+void insertattail(node*& head, int y) {
+    if (head == NULL) {
+        insertathead(head, y);
+        return;
+    }
+    node* temp = new node(y);
+    node* tail = head;
+    while (tail->next != NULL) {
+        tail = tail->next;
+    }
+    tail->next = temp;
+}
+
+void print(node* head) {
+    while (head != NULL) {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+int getlength(node* head) {
+    int length = 0;
+    while (head != NULL) {
+        length++;
+        head = head->next;
+    }
+    return length;
+}
+
+void deletefromback(node*&head,int k){
+    node*ptr1 =head;
+    node*ptr2 = head;
+    for(int i =0;i<n;i++){
+      ptr2 =ptr2->next;
+    }
+    if(ptr2==NULL){
+        node*temp =head;
+        head=head->next;
+        free(temp);
+    }
+    while(ptr2->next!=NULL){
+        ptr1 =ptr1->next;
+        ptr2 =ptr2->next;
+    }
+   node*temp =ptr1->next;
+   ptr1->next =ptr1->next->next;
+   free(temp);
+
+
+}
+
+
+
+int main() {
+    node* node1 = new node(1);
+    node* head1 = node1;
+    insertattail(head1, 2);
+    insertattail(head1, 3);
+    insertattail(head1, 4);
+    insertattail(head1, 5);
+
+    return 0;
+}

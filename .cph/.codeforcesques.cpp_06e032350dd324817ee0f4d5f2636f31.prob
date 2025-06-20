@@ -1,0 +1,1 @@
+{"name":"Local: codeforcesques","url":"c:\\Users\\HP\\OneDrive\\Desktop\\C++\\codeforcesques.cpp","tests":[{"id":1718218949776,"input":"3\n1\n2\n3","output":"1\n1 2\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Desktop\\C++\\codeforcesques.cpp","group":"local","local":true}
